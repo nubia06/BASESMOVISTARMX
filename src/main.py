@@ -4,7 +4,6 @@ from Imports import *
 sys.path.append(os.path.join("Controllers"))
 from controller import *
 from Functions import *
-print("yes")
 # Obterner la colección de rutas a consultar   
 with open(os.path.join("config","config_files.json")) as archivo_config:
     configuracion = json.load(archivo_config)
@@ -19,6 +18,7 @@ for i in range(len(list(archivos))):
     nombre_tabla   = coleccion[key1]["varibles"][1].strip("'")
     path_0         = coleccion[key1]["varibles"][2].strip("'")
     separador = coleccion[key1]["opcion_path"][1].strip("'")
+    limpieza = coleccion[key1]["opcion_path"][2].strip("'")
     # Selección de tipo de ruta a leer 
     if  coleccion[key1]["opcion_path"][0].strip("'") == "1":
         path = f"{path_0}\{anio}\{mes}\{dia}"
@@ -35,6 +35,4 @@ for i in range(len(list(archivos))):
 
     if __name__ == '__main__':
         # Ejecucion de varible primaria 
-        scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hojas,separador)
-        print(dic_fechas)
-        print(separador)
+        scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hojas,separador,limpieza)

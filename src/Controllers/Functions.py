@@ -3,7 +3,7 @@ import sys
 sys.path.append(os.path.join(".."))
 from Imports import *
 ip="60"
-
+# -1002010546154 -- chat_id produción
 ruta_config_files = os.path.join( "config", f"config_{ip}.json")
 with open(ruta_config_files) as f:
     configuracion = json.load(f)

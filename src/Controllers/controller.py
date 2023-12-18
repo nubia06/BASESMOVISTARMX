@@ -1,6 +1,9 @@
 # Importar librerias necesarias
 import os
 import sys
+
+import pandas as pd
+
 from Functions import *
 from Connections import *
 sys.path.append(os.path.join(".."))
@@ -39,13 +42,17 @@ def Read_files_path(path_,nombre_tabla,nombre_archivo):
 
 
 def toSqlTxt(path,nombre_tabla,file_, dic_fechas,dic_formatos,separador):
-    print(dic_fechas)
     print(dic_formatos)
     time.sleep(999)
     logging.info('Lectura archivo')
     print(file_)
-    df = pd.read_csv(path+"/"+file_, dtype=str, index_col=False)
+    df = pd.read_csv(path+"/"+file_,sep = separador,dtype=str, index_col=False)
     fecha= datetime.datetime.fromtimestamp(os.path.getmtime(os.path.join(path, file_)))
+    fechas = dic_fechas.keys()
+    for i in len(list(fechas)):
+        key = list(fechas)[i].strip("'")
+        df[dic_fechas[key][0].strip("'")]= pd.to_datetime(df[dic_fechas[key][0].strip("'")],format=dic_fechas[key][1].strip("'"),errors="ignore")
+        
     df['FILE_DATE'] = fecha
     df['FILE_NAME'] = file_
     df['FILE_YEAR'] = df['FILE_DATE'].dt.year
@@ -125,13 +132,15 @@ def check_and_add(path,nombre_tabla,file, dic_fechas,dic_formatos,dic_hojas,sepa
         fin = time.time()
         logging.getLogger("user").info(f"Tiempo total de ejecucion: {ini-fin} de {file}")
 
-def scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hojas,separador):
+def scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hojas,separador,limpieza):
     try:
+        print("ruta: ",path,"nombre tabla: ",nombre_tabla,"nombre archivo: ",nombre_archivo)
         if os.path.exists(path):
             file_to_load = Read_files_path(path,nombre_tabla,nombre_archivo)
+            print(file_to_load)
             for file in file_to_load:
                 print("cargando",file)
-                check_and_add(path,nombre_tabla,file, dic_fechas,dic_formatos,dic_hojas,separador)
+                check_and_add(path,nombre_tabla,file, dic_fechas,dic_formatos,dic_hojas,separador,limpieza)
         else:
             if hora == '08:00':
                 send(f"No ha habido cargue de la base {nombre_tabla} del {anio}-{mes}-{dia}")
