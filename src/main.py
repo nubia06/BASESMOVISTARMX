@@ -3,7 +3,8 @@ from Imports import *
 # Importar ruta de controller
 sys.path.append(os.path.join("Controllers"))
 from controller import *
-
+from Functions import *
+print("yes")
 # Obterner la colección de rutas a consultar   
 with open(os.path.join("config","config_files.json")) as archivo_config:
     configuracion = json.load(archivo_config)
@@ -34,6 +35,6 @@ for i in range(len(list(archivos))):
 
     if __name__ == '__main__':
         # Ejecucion de varible primaria 
-        #scan_folder(path,nombre_tabla,nombre_archivo)
+        scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hojas,separador)
         print(dic_fechas)
         print(separador)

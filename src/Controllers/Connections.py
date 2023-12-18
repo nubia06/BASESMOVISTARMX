@@ -24,4 +24,4 @@ def mysql_engine():
     
     url       = f'mysql+pymysql://{credecial["user"]}:{quote(credecial["password"])}@{credecial["host"]}:{"3306"}/{credecial["database"]}'
     engine    = create_engine(url,pool_recycle=9600,isolation_level="AUTOCOMMIT")
-    return engine
+    return engine, credecial["database"]
