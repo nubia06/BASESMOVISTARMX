@@ -1,0 +1,12 @@
+{
+    "credenciales_conexion_db":{
+        "host": "172.70.7.60",
+        "port": 3306,
+        "user": "sebastianavila5383",
+        "password": "&k0wNF4ga2WAMAo$avNt",
+        "database": "bbdd_groupcos_repositorio_movistar_mexico"
+    },
+    "credenciales_bot_tlgrm":{
+        "accesos":["6428383923:AAG0qf2ldDkNkEEAzC-m5RsILhE4xdfTrks","-1002010546154"]
+    }
+}
