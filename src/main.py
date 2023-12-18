@@ -13,16 +13,27 @@ coleccion = configuracion["ejecuciones"]
 # Iterar las rutas para poceder hacer el proceso de cada una de las rutas 
 for i in range(len(list(archivos))):
     key1=list(archivos)[i].strip("'")
-    keys = coleccion[key1].keys()
-    for j in  range(len(list(archivos))):
-        key2=list(keys)[j].strip("'")
-        print(key2)
-    nombre_archivo = coleccion[key1][0].strip("'")
-    nombre_tabla   = coleccion[key1][1].strip("'")
-    path_0         = coleccion[key1][2].strip("'")
-    path           = f"{path_0}\{anio}\{mes}"
+    # variables globales
+    nombre_archivo = coleccion[key1]["varibles"][0].strip("'")
+    nombre_tabla   = coleccion[key1]["varibles"][1].strip("'")
+    path_0         = coleccion[key1]["varibles"][2].strip("'")
+    separador = coleccion[key1]["opcion_path"][1].strip("'")
+    # Selección de tipo de ruta a leer 
+    if  coleccion[key1]["opcion_path"][0].strip("'") == "1":
+        path = f"{path_0}\{anio}\{mes}\{dia}"
+    elif coleccion[key1]["opcion_path"][0].strip("'") == "2":
+        path = f"{path_0}\{anio}\{mes}"
+    elif coleccion[key1]["opcion_path"][0].strip("'") == "3":
+        path = f"{path_0}\{anio}"
+    elif coleccion[key1]["opcion_path"][0].strip("'") == "4":
+        path = f"{path_0}"
+    # Extracion de dicionarios a leer
+    dic_fechas = coleccion[key1]["fechas"]
+    dic_formatos = coleccion[key1]["formatos"]
+    dic_hojas = coleccion[key1]["sheets"]
 
     if __name__ == '__main__':
+        # Ejecucion de varible primaria 
         #scan_folder(path,nombre_tabla,nombre_archivo)
-        print(path)
-        print(nombre_archivo)
+        print(dic_fechas)
+        print(separador)
