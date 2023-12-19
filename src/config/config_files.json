@@ -1,14 +1,14 @@
 {
     "ejecuciones":{
         "archivo1":{
-            "varibles":["Pagos_B2b24_mx","pagos_b2b24_mx","L:\\OPERACIONES\\Movistar Cartera  Mexico\\Backoffice\\00.Insumos\\01.Pago"],
+            "varibles":["Pagos_B2b24_mx","pagos_b2b24_mx","/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago"],
             "sheets":[""],
-            "opcion_path":["2",";","1"],
+            "opcion_path":["4",";","1"],
             "fechas":{"fecha1":["FECHA_PAGO","%Y:%m:%d"]},
             "formatos":{"column1":["CLIENTE","[^0-9-.]"]}
         },
         "archivo2":{
-            "varibles":["PAGOS","pagos","L:\\OPERACIONES\\Movistar Cartera  Mexico\\Backoffice\\00.Insumos\\01.Pago"],
+            "varibles":["PAGOS","pagos","/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago"],
             "sheets":["hoja1","hoja2"],
             "opcion_path":["4",",","0"],
             "fechas":{"fecha1":["fecha","%Y:%m:%d"],"fecha2":["fecha_modificacion","%Y:%m:%d"]},

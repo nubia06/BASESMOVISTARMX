@@ -36,3 +36,4 @@ for i in range(len(list(archivos))):
     if __name__ == '__main__':
         # Ejecucion de varible primaria 
         scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hojas,separador,limpieza)
+#         

@@ -20,11 +20,10 @@ fecha   = datetime.datetime.now().strftime("%Y-%m-%d")
 
 def Read_files_path(path_,nombre_tabla,nombre_archivo):
     try: 
-        print(nombre_tabla)
+        
         archivos_total = os.listdir(path_) 
-        print(archivos_total)
         archivos = [valor for valor in archivos_total if f"{nombre_archivo}" in valor]
-        print(f"{archivos}\n")
+        print(f"cantidad archivos: {archivos}\n")
     except Exception as e:
         logging.getLogger("user").exception(e)
         raise 
@@ -37,6 +36,7 @@ def Read_files_path(path_,nombre_tabla,nombre_archivo):
         logging.getLogger("user").debug("No hay archivos para cargar")
         print(different_files)
     return different_files
+
 
 
 
@@ -134,7 +134,6 @@ def check_and_add(path,nombre_tabla,file, dic_fechas,dic_formatos,dic_hojas,sepa
 
 def scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hojas,separador,limpieza):
     try:
-        print("ruta: ",path,"nombre tabla: ",nombre_tabla,"nombre archivo: ",nombre_archivo)
         if os.path.exists(path):
             file_to_load = Read_files_path(path,nombre_tabla,nombre_archivo)
             print(file_to_load)
@@ -144,6 +143,7 @@ def scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hoj
         else:
             if hora == '08:00':
                 send(f"No ha habido cargue de la base {nombre_tabla} del {anio}-{mes}-{dia}")
+                print(f"No ha habido cargue de la base {nombre_tabla} del {anio}-{mes}-{dia}")
          
     except Exception as e:
         print(e)
