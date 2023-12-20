@@ -1,0 +1,20 @@
+/////// Archivo Guia para configuracion Cargue ////////////
+
+- La clave principal es un dicionario que contiene todos los cargues que se realicen en el proyecto: "ejecuciones". 
+- Las claves segundarias contienen informacion de cada uno de los cargues : "archivo1","archivo2" etc..
+-- La clave  "opcion_path" se usa para validaciones en cada uno de los archivo y como condiciones para cargue la cual el valor
+-- en la primera posicion nos ayuda a definir la condicion de la ruta, si toca agregarle automacicamente un valor ejemplo:
+-- 1 : f"{ruta}{anio}{mes}{dia}"
+-- 2 : f"{ruta}{anio}{mes}"
+-- 3 : f"{ruta}{anio}"
+-- 4 : f"{ruta}"
+
+"ejecuciones":{
+        "archivo1":{
+            "varibles":[["nombres_conterner el archivo "],"Nombre_tabla_base","Ruta directorio a consumir"],
+            "sheets":["hojas del archivo en caso de excel. Por defecto vacia si es solo una"],
+            "opcion_path":["condicion_ruta","separador_lectura"],
+            "opcion_cargue_tabla":[1 o 0, si el cargue del archivo se debe hacer a una misma tabla o a distintas (como las distintas hojas de un excel)],
+            "fechas":["lista de columnas fecha del archivo"],
+            "formatos":["lista de columnas de cuentas del archivo"]
+        }

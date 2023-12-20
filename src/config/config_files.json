@@ -1,18 +1,28 @@
 {
     "ejecuciones":{
         "archivo1":{
-            "varibles":["Pagos_B2b24_mx","pagos_b2b24_mx","/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago"],
-            "sheets":[""],
+            "varibles":[["Pagos_B2b24_mx"],"pagos_b2b24_mx","//root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago"],
+            "sheets":["None"],
             "opcion_path":["4",";","1"],
-            "fechas":{"fecha1":["FECHA_PAGO","%Y:%m:%d"]},
+            "opcion_cargue_tabla":1,
+            "fechas":{"fecha1":["FECHA_PAGO","%Y-%m-%d"]},
             "formatos":{"column1":["CLIENTE","[^0-9-.]"]}
         },
         "archivo2":{
-            "varibles":["PAGOS","pagos","/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago"],
-            "sheets":["hoja1","hoja2"],
-            "opcion_path":["4",",","0"],
-            "fechas":{"fecha1":["fecha","%Y:%m:%d"],"fecha2":["fecha_modificacion","%Y:%m:%d"]},
-            "formatos":{"column1":["fomato1","1"],"column2":["fomato2","3"]}
+            "varibles":[["PAGOS"],"pagos","/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago"],
+            "sheets":["None"],
+            "opcion_path":["4",";","0"],
+            "opcion_cargue_tabla":1,
+            "fechas":{"fecha1":["ENTRY_DATE","%Y-%m-%d %I:%M:%S"],"fecha2":["PAYMENT_DATE","%Y-%m-%d %I:%M:%S"]},
+            "formatos":{"column1":[""]}
+        },
+        "archivo3":{
+            "varibles":[["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"],"b2c","/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación"],
+            "sheets":["DIGITAL", "INTERNA", "TRADICIONAL", "CHURN", "B2B"],
+            "opcion_path":["3",";","0"],
+            "opcion_cargue_tabla":1,
+            "fechas":{"fecha1":["ACTIVE_DATE","%Y-%m-%d %I:%M:%S"],"fecha2":["INICIO_ESTADIA","%Y-%m-%d %I:%M:%S"],"fecha3":["FIN_ESTADIA","%Y-%m-%d %I:%M:%S"],"fecha4":["POSIBLE_BAJA","%Y-%m-%d %I:%M:%S"]},
+            "formatos":{"column1":[""]}
         }
     }
 }
