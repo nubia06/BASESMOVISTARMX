@@ -5,15 +5,17 @@
             "sheets":["None"],
             "opcion_path":["4",";","1"],
             "opcion_cargue_tabla":1,
-            "fechas":{"fecha1":["FECHA_PAGO","%Y-%m-%d"]},
-            "formatos":{"column1":["CLIENTE","[^0-9-.]"]}
+            "asignacion":0,
+            "fechas":["FECHA_PAGO"],
+            "formatos":["CLIENTE"]
         },
         "archivo2":{
             "varibles":[["PAGOS"],"pagos","/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago"],
             "sheets":["None"],
             "opcion_path":["4",";","0"],
             "opcion_cargue_tabla":1,
-            "fechas":{"fecha1":["ENTRY_DATE","%Y-%m-%d %I:%M:%S"],"fecha2":["PAYMENT_DATE","%Y-%m-%d %I:%M:%S"]},
+            "asignacion":0,
+            "fechas":["ENTRY_DATE","PAYMENT_DATE"],
             "formatos":{"column1":[""]}
         },
         "archivo3":{
@@ -21,7 +23,8 @@
             "sheets":["DIGITAL", "INTERNA", "TRADICIONAL", "CHURN", "B2B"],
             "opcion_path":["3",";","0"],
             "opcion_cargue_tabla":1,
-            "fechas":{"fecha1":["ACTIVE_DATE","%Y-%m-%d %I:%M:%S"],"fecha2":["INICIO_ESTADIA","%Y-%m-%d %I:%M:%S"],"fecha3":["FIN_ESTADIA","%Y-%m-%d %I:%M:%S"],"fecha4":["POSIBLE_BAJA","%Y-%m-%d %I:%M:%S"]},
+            "asignacion":1,
+            "fechas":["ACTIVE_DATE","INICIO_ESTADIA","FIN_ESTADIA","POSIBLE_BAJA", "A"],
             "formatos":{"column1":[""]}
         }
     }

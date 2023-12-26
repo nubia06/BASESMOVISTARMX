@@ -22,6 +22,7 @@ for i in range(len(list(archivos))):
     separador = coleccion[key1]["opcion_path"][1].strip("'")
     limpieza = coleccion[key1]["opcion_path"][2].strip("'")
     cargue_tabla = coleccion[key1]["opcion_cargue_tabla"] 
+    asignacion = coleccion[key1]["asignacion"]
     
     # Selección de tipo de ruta a leer 
     if  coleccion[key1]["opcion_path"][0].strip("'") == "1":
@@ -37,7 +38,6 @@ for i in range(len(list(archivos))):
     dic_fechas = coleccion[key1]["fechas"]
     dic_formatos = coleccion[key1]["formatos"]
     dic_hojas = coleccion[key1]["sheets"]
-
     if __name__ == '__main__':
         # Ejecucion de función primaria 
-        scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hojas,separador, cargue_tabla)
+        scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hojas,separador, cargue_tabla, asignacion)
