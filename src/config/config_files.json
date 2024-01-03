@@ -16,7 +16,7 @@
             "opcion_cargue_tabla":1,
             "asignacion":0,
             "fechas":["ENTRY_DATE","PAYMENT_DATE"],
-            "formatos":{"column1":[""]}
+            "formatos":[]
         },
         "archivo3":{
             "varibles":[["ENERO", "FEBRERO", "MARZO", "ABRIL", "MAYO", "JUNIO", "JULIO", "AGOSTO", "SEPTIEMBRE", "OCTUBRE", "NOVIEMBRE", "DICIEMBRE"],"b2c","/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación"],
@@ -25,7 +25,7 @@
             "opcion_cargue_tabla":1,
             "asignacion":1,
             "fechas":["ACTIVE_DATE","INICIO_ESTADIA","FIN_ESTADIA","POSIBLE_BAJA", "A"],
-            "formatos":{"column1":[""]}
+            "formatos":[]
         }
     }
 }

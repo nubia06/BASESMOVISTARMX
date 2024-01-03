@@ -99,6 +99,7 @@ def toSqlTxt(path,nombre_tabla,file_, dic_fechas, dic_formatos, separador):
     logging.getLogger("user").info(f"cargando archivo de texto")
     logging.info('Lectura archivo')
     df = dd.read_csv(path+"/"+file_[22:],sep = separador,dtype=str, index_col=False)
+    print(df)
     fecha= datetime.datetime.fromtimestamp(os.path.getmtime(os.path.join(path, file_[22:])))
     tabla_reemplazo = str.maketrans({"á":"a","é":"e","í":"i","ó":"o","ú":"u","ñ":"n","Á":"A","É":"E","Í":"I","Ó":"O","Ú":"U","Ñ":"N"})
     df.columns = df.columns.str.strip()
@@ -107,7 +108,6 @@ def toSqlTxt(path,nombre_tabla,file_, dic_fechas, dic_formatos, separador):
     df.columns = df.columns.str.replace("[^0-9a-zA-Z_]", "", regex=True)
     df.columns = [insertar_raya_al_piso(nombre_columna) for nombre_columna in df.columns]
     df.columns = df.columns.str.upper()
-    print(dic_fechas)
     for fecha_mod in dic_fechas:
         if fecha_mod in df.columns:
             df[fecha_mod] = df[fecha_mod].apply(convertir_fecha, meta=(f"{fecha_mod}", "str"))
@@ -116,6 +116,8 @@ def toSqlTxt(path,nombre_tabla,file_, dic_fechas, dic_formatos, separador):
     df['FILE_NAME'] = file_[22:]
     df['FILE_YEAR'] = df['FILE_DATE'].dt.year
     df['FILE_MONTH']  = df['FILE_DATE'].dt.month
+    
+    df['FECHA_CARGUE'] = datetime.datetime.now()
     print(dic_formatos)
     for formato in dic_formatos:
         if formato in df.columns:
@@ -140,7 +142,7 @@ def toSqlTxt(path,nombre_tabla,file_, dic_fechas, dic_formatos, separador):
         tmp.create(bind = engine)
         logging.getLogger("user").info('Creacion Tabla temporal')
         # Cargue del DataFrame de Dask en la base de datos MySQL.
-        df.to_sql(tmp.name, connection, if_exists='append',index=False,parallel=True)
+        df.to_sql(tmp.name, cdn_connection, if_exists='append',index=False,parallel=True)
         connection.execute(text(f"INSERT IGNORE INTO {tabla.name} SELECT * FROM {tmp.name};"))
         tmp.drop(bind = engine,checkfirst=True)
         logging.getLogger("user").info('Insercion Tabla destino DW')
@@ -153,17 +155,35 @@ def toSqlExcel(path,nombre_tabla,file_, dic_fechas,dic_formatos,dic_hojas,separa
     try:
         logging.info('Lectura archivo')
         excel_file = pd.ExcelFile(path+"/"+file_[22:])
-        hojas_documento = excel_file.sheet_names
-        fechaHoraActual=datetime.datetime.now()
-        for sheet_1 in hojas_documento:
-            Xlsx2csv(path+"/"+file_[22:], outputencoding="utf-8").convert(os.path.join("TemporalFiles",f"{sheet_1}.csv"), sheetname=sheet_1)
-            logging.info(f"se creó el archivo {sheet_1}.csv")
         
-        archivos_hojas = os.listdir(os.path.join("TemporalFiles"))
-        for sheet in archivos_hojas:
+        hojas_documento = excel_file.sheet_names
+        print(f"las hojas del archivo son : {hojas_documento}")
+        fechaHoraActual=datetime.datetime.now()
+        if asignacion==1:
+            dic_hojas2 = []
+            for i in dic_hojas:
+                if i in hojas_documento:
+                    dic_hojas2.append(i)
+            print(f"DICCIONARIO NUEVO {dic_hojas2}")
+            print(f"DICCIONARIO ANTERIOR {dic_hojas}")
+            dic_hojas=dic_hojas2
+
+            
+        
+        #archivos_hojas = os.listdir(os.path.join("TemporalFiles"))
+        for sheet in dic_hojas:
             try:
-                df = dd.read_csv(os.path.join("TemporalFiles", sheet), sep=",", dtype=str)
-                if "B2B.csv" in hojas_documento and asignacion==1:
+                if sheet=="None":
+                    df = pd.read_excel(path+"/"+file_[22:] ,  dtype=str)
+                else:
+                    df = pd.read_excel(path+"/"+file_[22:] , sheet_name=sheet, dtype=str)
+                print(sheet)
+                if sheet=="CHURN" and asignacion==1:
+                    df = df.drop('INDICADOR_PORTA', axis=1)
+                    df['INDICADOR_PORTA']=df.index
+                print(df)
+                df = dd.from_pandas(df,  npartitions=10)
+                if sheet =="B2B" and asignacion==1:
                     df["CAMPAÑA"]="B2B"
                 elif asignacion==1:
                     df["CAMPAÑA"]="B2C"
@@ -183,17 +203,17 @@ def toSqlExcel(path,nombre_tabla,file_, dic_fechas,dic_formatos,dic_hojas,separa
                 df['FILE_YEAR'] = df['FILE_DATE'].dt.year
                 df['FILE_MONTH']  = df['FILE_DATE'].dt.month
                 df['FECHA_CARGUE'] = fechaHoraActual
-                if cargue_tabla == 1:
-                    df['HOJA_DATA'] = sheet[:-4]
+                if cargue_tabla == 1 and len(hojas_documento)>1:
+                    df['HOJA_DATA'] = sheet
                     nombre_tabla1 = f"{nombre_tabla}"
-                else:
-                    if len(archivos_hojas)>=1:
+                elif cargue_tabla == 0 and len(hojas_documento)>1:
                         nombre_tabla1= f"{nombre_tabla}_{sheet}"
+                else:
+                    nombre_tabla1 = f"{nombre_tabla}"
                 for clave in dic_formatos:
-                    valor = dic_formatos[clave]
-                    if valor[0] in df.columns:
-                        df[valor[0]] = df[valor[0]].str.replace(",", ".", regex=True)
-                        df[valor[0]] = df[valor[0]].str.replace("[^0-9-.]", "", regex=True)
+                    if clave in df.columns:
+                        df[clave] = df[clave].str.replace(",", ".", regex=True)
+                        df[clave] = df[clave].str.replace("[^0-9-.]", "", regex=True)
                 connection,cdn_connection,engine,bbdd_or = mysql_connection()
                 logging.getLogger("user").info('Creacion Tabla temporal')
                 tabla = Table(f"tb_asignacion_{nombre_tabla1}", MetaData(), autoload_with = engine)
@@ -213,7 +233,7 @@ def toSqlExcel(path,nombre_tabla,file_, dic_fechas,dic_formatos,dic_hojas,separa
                 df.repartition(npartitions=10)
                 # Cargue del DataFrame de Dask en la base de datos MySQL.
                 df.to_sql(tmp.name, cdn_connection, if_exists='append',index=False,parallel=True)
-                connection.execute(text(f"INSERT IGNORE INTO {tabla.name} SELECT * FROM {tmp.name};"))
+                connection.execute(text(f"REPLACE INTO {tabla.name} SELECT * FROM {tmp.name};"))
                 tmp.drop(bind = engine,checkfirst=True)
                 logging.getLogger("user").info('Insercion Tabla destino DW')
             except Exception as e:
@@ -226,7 +246,8 @@ def toSqlExcel(path,nombre_tabla,file_, dic_fechas,dic_formatos,dic_hojas,separa
         raise
     finally:
         for file in os.listdir(os.path.join("TemporalFiles")):
-            os.remove(os.path.join("TemporalFiles", file))
+            #os.remove(os.path.join("TemporalFiles", file))
+            print("a")
 
 def toSqlZip(path,nombre_tabla,file, dic_fechas,dic_formatos,dic_hojas,separador, nombre_archivo, cargue_tabla, asignacion, logs):
     try:
@@ -305,6 +326,6 @@ def scan_folder(path,nombre_tabla,nombre_archivo,dic_fechas,dic_formatos,dic_hoj
             if hora == '08:00':
                 # mesaje en caso de que no se encuentra la ruta deseada
                 send(f"No ha habido cargue de la base {nombre_tabla} del {anio}-{mes}-{dia}") 
-         
+            print(f"{path} No existe")
     except Exception as e:
         print(e)
