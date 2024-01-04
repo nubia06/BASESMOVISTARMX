@@ -1,0 +1,216 @@
+en Scan pagos_b2b24_mx_nub -- ['Pagos_B2b24_mx']-- //root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago
+BUSCANDO ARCHIVOS
+['Pagos_B2b24_mx']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['Pagos_B2b24_mx.csv']
+
+set()
+set()
+en Scan pagos_nub -- ['PAGOS']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago
+BUSCANDO ARCHIVOS
+['PAGOS']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx']
+
+set()
+set()
+en Scan b2c_nub -- ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación/2023
+BUSCANDO ARCHIVOS
+['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+['11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx', '13.ENERO.xlsx', '14.FEBRERO.xlsx', 'C671A8E.tmp', 'Temporal_files', 'Thumbs.db']
+cantidad archivos: ['13.ENERO.xlsx', '14.FEBRERO.xlsx', '11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx']
+
+set()
+set()
+en Scan pagos_b2b24_mx_nub -- ['Pagos_B2b24_mx']-- //root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago
+BUSCANDO ARCHIVOS
+['Pagos_B2b24_mx']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['Pagos_B2b24_mx.csv']
+
+set()
+set()
+en Scan pagos_nub -- ['PAGOS']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago
+BUSCANDO ARCHIVOS
+['PAGOS']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx']
+
+set()
+set()
+en Scan b2c_nub -- ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación/2023
+BUSCANDO ARCHIVOS
+['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+['11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx', '13.ENERO.xlsx', '14.FEBRERO.xlsx', 'C671A8E.tmp', 'Temporal_files', 'Thumbs.db']
+cantidad archivos: ['13.ENERO.xlsx', '14.FEBRERO.xlsx', '11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx']
+
+set()
+set()
+en Scan pagos_b2b24_mx_nub -- ['Pagos_B2b24_mx']-- //root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago
+BUSCANDO ARCHIVOS
+['Pagos_B2b24_mx']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['Pagos_B2b24_mx.csv']
+
+set()
+set()
+en Scan pagos_nub -- ['PAGOS']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago
+BUSCANDO ARCHIVOS
+['PAGOS']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx']
+
+set()
+set()
+en Scan b2c_nub -- ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación/2023
+BUSCANDO ARCHIVOS
+['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+['11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx', '13.ENERO.xlsx', '14.FEBRERO.xlsx', 'C671A8E.tmp', 'Temporal_files', 'Thumbs.db']
+cantidad archivos: ['13.ENERO.xlsx', '14.FEBRERO.xlsx', '11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx']
+
+set()
+set()
+en Scan pagos_b2b24_mx_nub -- ['Pagos_B2b24_mx']-- //root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago
+BUSCANDO ARCHIVOS
+['Pagos_B2b24_mx']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['Pagos_B2b24_mx.csv']
+
+set()
+set()
+en Scan pagos_nub -- ['PAGOS']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago
+BUSCANDO ARCHIVOS
+['PAGOS']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx']
+
+set()
+set()
+en Scan b2c_nub -- ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación/2023
+BUSCANDO ARCHIVOS
+['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+['11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx', '13.ENERO.xlsx', '14.FEBRERO.xlsx', 'C671A8E.tmp', 'Temporal_files', 'Thumbs.db']
+cantidad archivos: ['13.ENERO.xlsx', '14.FEBRERO.xlsx', '11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx']
+
+set()
+set()
+en Scan pagos_b2b24_mx_nub -- ['Pagos_B2b24_mx']-- //root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago
+BUSCANDO ARCHIVOS
+['Pagos_B2b24_mx']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['Pagos_B2b24_mx.csv']
+
+set()
+set()
+en Scan pagos_nub -- ['PAGOS']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago
+BUSCANDO ARCHIVOS
+['PAGOS']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx']
+
+set()
+set()
+en Scan b2c_nub -- ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación/2023
+BUSCANDO ARCHIVOS
+['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+['11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx', '13.ENERO.xlsx', '14.FEBRERO.xlsx', 'C671A8E.tmp', 'Temporal_files', 'Thumbs.db']
+cantidad archivos: ['13.ENERO.xlsx', '14.FEBRERO.xlsx', '11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx']
+
+set()
+set()
+en Scan pagos_b2b24_mx_nub -- ['Pagos_B2b24_mx']-- //root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago
+BUSCANDO ARCHIVOS
+['Pagos_B2b24_mx']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['Pagos_B2b24_mx.csv']
+
+set()
+set()
+en Scan pagos_nub -- ['PAGOS']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago
+BUSCANDO ARCHIVOS
+['PAGOS']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx']
+
+set()
+set()
+en Scan b2c_nub -- ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación/2023
+BUSCANDO ARCHIVOS
+['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+['11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx', '13.ENERO.xlsx', '14.FEBRERO.xlsx', 'C671A8E.tmp', 'Temporal_files', 'Thumbs.db']
+cantidad archivos: ['13.ENERO.xlsx', '14.FEBRERO.xlsx', '11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx']
+
+set()
+set()
+en Scan pagos_b2b24_mx_nub -- ['Pagos_B2b24_mx']-- //root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago
+BUSCANDO ARCHIVOS
+['Pagos_B2b24_mx']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['Pagos_B2b24_mx.csv']
+
+set()
+set()
+en Scan pagos_nub -- ['PAGOS']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago
+BUSCANDO ARCHIVOS
+['PAGOS']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx']
+
+set()
+set()
+en Scan b2c_nub -- ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación/2023
+BUSCANDO ARCHIVOS
+['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+['11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx', '13.ENERO.xlsx', '14.FEBRERO.xlsx', 'C671A8E.tmp', 'Temporal_files', 'Thumbs.db']
+cantidad archivos: ['13.ENERO.xlsx', '14.FEBRERO.xlsx', '11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx']
+
+set()
+set()
+en Scan pagos_b2b24_mx_nub -- ['Pagos_B2b24_mx']-- //root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago
+BUSCANDO ARCHIVOS
+['Pagos_B2b24_mx']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['Pagos_B2b24_mx.csv']
+
+set()
+set()
+en Scan pagos_nub -- ['PAGOS']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago
+BUSCANDO ARCHIVOS
+['PAGOS']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx']
+
+set()
+set()
+en Scan b2c_nub -- ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación/2023
+BUSCANDO ARCHIVOS
+['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+['11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx', '13.ENERO.xlsx', '14.FEBRERO.xlsx', 'C671A8E.tmp', 'Temporal_files', 'Thumbs.db']
+cantidad archivos: ['13.ENERO.xlsx', '14.FEBRERO.xlsx', '11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx']
+
+set()
+set()
+en Scan pagos_b2b24_mx_nub -- ['Pagos_B2b24_mx']-- //root//PROCESOS//COMPARTIDA_COS_L//OPERACIONES//Movistar Cartera  Mexico//Backoffice//00.Insumos//01.Pago
+BUSCANDO ARCHIVOS
+['Pagos_B2b24_mx']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['Pagos_B2b24_mx.csv']
+
+set()
+set()
+en Scan pagos_nub -- ['PAGOS']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago
+BUSCANDO ARCHIVOS
+['PAGOS']
+['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx', 'Pagos_B2b24_mx.csv']
+cantidad archivos: ['PAGOS 01012024.csv', 'PAGOS 02012024.csv', 'PAGOS 26122023.csv', 'PAGOS 27122023.csv', 'PAGOS 28122023.csv', 'PAGOS 29122023.xlsx', 'PAGOS 30122023.xlsx', 'PAGOS 31122023.xlsx']
+
+set()
+set()
+en Scan b2c_nub -- ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']-- /root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/05.Asignación/2023
+BUSCANDO ARCHIVOS
+['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE']
+['11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx', '13.ENERO.xlsx', '14.FEBRERO.xlsx', 'C671A8E.tmp', 'Temporal_files', 'Thumbs.db']
+cantidad archivos: ['13.ENERO.xlsx', '14.FEBRERO.xlsx', '11.NOVIEMBRE.xlsx', '12.DICIEMBRE.xlsx']
+
+set()
+set()

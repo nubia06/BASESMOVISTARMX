@@ -8169,3 +8169,173 @@ ValueError: Worksheet named 'B2B' not found
 [2024-01-03 09:37:16 >> INFO    ] Insercion Tabla destino DW
 [2024-01-03 09:37:17 >> INFO    ] Base '11.NOVIEMBRE.xlsx' del 2023-11-24 08:15:19  recien cargada [ToSQL]
 [2024-01-03 09:37:17 >> INFO    ] Tiempo total de ejecucion: 719.8243224620819 de 2023-11-24 08:15:19 - 11.NOVIEMBRE.xlsx
+[2024-01-03 16:59:22 >> INFO    ]  archivo a cargar2024-01-03 10:43:47 - PAGOS 02012024.csv
+[2024-01-03 16:59:22 >> INFO    ] La base 'PAGOS 02012024.csv' del 2024-01-03 10:43:47  esta por cargarse
+[2024-01-03 16:59:22 >> INFO    ] el archivo es un txt
+[2024-01-03 16:59:22 >> INFO    ] cargando archivo de texto
+[2024-01-03 16:59:22 >> ERROR   ] tb_asignacion_pagos
+Traceback (most recent call last):
+  File "/root/PROCESOS/BASESMOVISTAR/src/Controllers/controller.py", line 128, in toSqlTxt
+    tabla = Table(f"tb_asignacion_{nombre_tabla}", MetaData(), autoload_with = engine)
+  File "<string>", line 2, in __new__
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 436, in __new__
+    return cls._new(*args, **kw)
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 490, in _new
+    with util.safe_reraise():
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 486, in _new
+    table.__init__(name, metadata, *args, _no_init=False, **kw)
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 866, in __init__
+    self._autoload(
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 898, in _autoload
+    conn_insp.reflect_table(
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/engine/reflection.py", line 1538, in reflect_table
+    raise exc.NoSuchTableError(table_name)
+sqlalchemy.exc.NoSuchTableError: tb_asignacion_pagos
+[2024-01-03 16:59:22 >> ERROR   ] Error en archivo: 2024-01-03 10:43:47 - PAGOS 02012024.csv
+tb_asignacion_pagos
+Traceback (most recent call last):
+  File "/root/PROCESOS/BASESMOVISTAR/src/Controllers/controller.py", line 294, in check_and_add
+    toSqlTxt(path,nombre_tabla,file, dic_fechas,dic_formatos,separador)
+  File "/root/PROCESOS/BASESMOVISTAR/src/Controllers/controller.py", line 128, in toSqlTxt
+    tabla = Table(f"tb_asignacion_{nombre_tabla}", MetaData(), autoload_with = engine)
+  File "<string>", line 2, in __new__
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/util/deprecations.py", line 281, in warned
+    return fn(*args, **kwargs)  # type: ignore[no-any-return]
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 436, in __new__
+    return cls._new(*args, **kw)
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 490, in _new
+    with util.safe_reraise():
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 486, in _new
+    table.__init__(name, metadata, *args, _no_init=False, **kw)
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 866, in __init__
+    self._autoload(
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/sql/schema.py", line 898, in _autoload
+    conn_insp.reflect_table(
+  File "/root/PROCESOS/BASESMOVISTAR/venv/lib/python3.10/site-packages/sqlalchemy/engine/reflection.py", line 1538, in reflect_table
+    raise exc.NoSuchTableError(table_name)
+sqlalchemy.exc.NoSuchTableError: tb_asignacion_pagos
+[2024-01-03 16:59:23 >> INFO    ] Tiempo total de ejecucion: 1.1114139556884766 de 2024-01-03 10:43:47 - PAGOS 02012024.csv
+[2024-01-03 17:01:46 >> INFO    ]  archivo a cargar2024-01-01 20:37:25 - PAGOS 28122023.csv
+[2024-01-03 17:01:46 >> INFO    ] La base 'PAGOS 28122023.csv' del 2024-01-01 20:37:25  esta por cargarse
+[2024-01-03 17:01:46 >> INFO    ] el archivo es un txt
+[2024-01-03 17:01:46 >> INFO    ] cargando archivo de texto
+[2024-01-03 17:01:46 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:02:21 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:02:22 >> INFO    ] Base 'PAGOS 28122023.csv' del 2024-01-01 20:37:25  recien cargada [ToSQL]
+[2024-01-03 17:02:22 >> INFO    ] Tiempo total de ejecucion: 35.73145079612732 de 2024-01-01 20:37:25 - PAGOS 28122023.csv
+[2024-01-03 17:02:22 >> INFO    ]  archivo a cargar2024-01-02 10:56:59 - PAGOS 29122023.xlsx
+[2024-01-03 17:02:22 >> INFO    ] La base 'PAGOS 29122023.xlsx' del 2024-01-02 10:56:59  esta por cargarse
+[2024-01-03 17:02:22 >> INFO    ] el archivo es un excel
+[2024-01-03 17:02:27 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:02:48 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:02:49 >> INFO    ] Base 'PAGOS 29122023.xlsx' del 2024-01-02 10:56:59  recien cargada [ToSQL]
+[2024-01-03 17:02:49 >> INFO    ] Tiempo total de ejecucion: 26.873034477233887 de 2024-01-02 10:56:59 - PAGOS 29122023.xlsx
+[2024-01-03 17:02:49 >> INFO    ]  archivo a cargar2024-01-02 12:54:03 - PAGOS 01012024.csv
+[2024-01-03 17:02:49 >> INFO    ] La base 'PAGOS 01012024.csv' del 2024-01-02 12:54:03  esta por cargarse
+[2024-01-03 17:02:49 >> INFO    ] el archivo es un txt
+[2024-01-03 17:02:49 >> INFO    ] cargando archivo de texto
+[2024-01-03 17:02:49 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:03:22 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:03:22 >> INFO    ] Base 'PAGOS 01012024.csv' del 2024-01-02 12:54:03  recien cargada [ToSQL]
+[2024-01-03 17:03:22 >> INFO    ] Tiempo total de ejecucion: 33.73783564567566 de 2024-01-02 12:54:03 - PAGOS 01012024.csv
+[2024-01-03 17:03:22 >> INFO    ]  archivo a cargar2024-01-02 11:01:48 - PAGOS 30122023.xlsx
+[2024-01-03 17:03:22 >> INFO    ] La base 'PAGOS 30122023.xlsx' del 2024-01-02 11:01:48  esta por cargarse
+[2024-01-03 17:03:22 >> INFO    ] el archivo es un excel
+[2024-01-03 17:03:26 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:03:40 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:03:41 >> INFO    ] Base 'PAGOS 30122023.xlsx' del 2024-01-02 11:01:48  recien cargada [ToSQL]
+[2024-01-03 17:03:41 >> INFO    ] Tiempo total de ejecucion: 18.71646809577942 de 2024-01-02 11:01:48 - PAGOS 30122023.xlsx
+[2024-01-03 17:03:41 >> INFO    ]  archivo a cargar2024-01-01 20:36:27 - PAGOS 27122023.csv
+[2024-01-03 17:03:41 >> INFO    ] La base 'PAGOS 27122023.csv' del 2024-01-01 20:36:27  esta por cargarse
+[2024-01-03 17:03:41 >> INFO    ] el archivo es un txt
+[2024-01-03 17:03:41 >> INFO    ] cargando archivo de texto
+[2024-01-03 17:03:42 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:04:12 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:04:13 >> INFO    ] Base 'PAGOS 27122023.csv' del 2024-01-01 20:36:27  recien cargada [ToSQL]
+[2024-01-03 17:04:13 >> INFO    ] Tiempo total de ejecucion: 31.999720573425293 de 2024-01-01 20:36:27 - PAGOS 27122023.csv
+[2024-01-03 17:04:13 >> INFO    ]  archivo a cargar2024-01-02 11:03:09 - PAGOS 31122023.xlsx
+[2024-01-03 17:04:13 >> INFO    ] La base 'PAGOS 31122023.xlsx' del 2024-01-02 11:03:09  esta por cargarse
+[2024-01-03 17:04:13 >> INFO    ] el archivo es un excel
+[2024-01-03 17:04:17 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:04:34 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:04:35 >> INFO    ] Base 'PAGOS 31122023.xlsx' del 2024-01-02 11:03:09  recien cargada [ToSQL]
+[2024-01-03 17:04:35 >> INFO    ] Tiempo total de ejecucion: 21.630438327789307 de 2024-01-02 11:03:09 - PAGOS 31122023.xlsx
+[2024-01-03 17:04:35 >> INFO    ]  archivo a cargar2024-01-03 10:43:47 - PAGOS 02012024.csv
+[2024-01-03 17:04:35 >> INFO    ] La base 'PAGOS 02012024.csv' del 2024-01-03 10:43:47  esta por cargarse
+[2024-01-03 17:04:35 >> INFO    ] el archivo es un txt
+[2024-01-03 17:04:35 >> INFO    ] cargando archivo de texto
+[2024-01-03 17:04:35 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:05:48 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:05:49 >> INFO    ] Base 'PAGOS 02012024.csv' del 2024-01-03 10:43:47  recien cargada [ToSQL]
+[2024-01-03 17:05:49 >> INFO    ] Tiempo total de ejecucion: 74.4779405593872 de 2024-01-03 10:43:47 - PAGOS 02012024.csv
+[2024-01-03 17:05:49 >> INFO    ]  archivo a cargar2024-01-01 20:35:27 - PAGOS 26122023.csv
+[2024-01-03 17:05:49 >> INFO    ] La base 'PAGOS 26122023.csv' del 2024-01-01 20:35:27  esta por cargarse
+[2024-01-03 17:05:49 >> INFO    ] el archivo es un txt
+[2024-01-03 17:05:49 >> INFO    ] cargando archivo de texto
+[2024-01-03 17:05:52 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:06:24 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:06:24 >> INFO    ] Base 'PAGOS 26122023.csv' del 2024-01-01 20:35:27  recien cargada [ToSQL]
+[2024-01-03 17:06:24 >> INFO    ] Tiempo total de ejecucion: 35.167404890060425 de 2024-01-01 20:35:27 - PAGOS 26122023.csv
+[2024-01-03 17:06:25 >> INFO    ]  archivo a cargar2023-12-15 15:40:38 - 12.DICIEMBRE.xlsx
+[2024-01-03 17:06:25 >> INFO    ] La base '12.DICIEMBRE.xlsx' del 2023-12-15 15:40:38  esta por cargarse
+[2024-01-03 17:06:25 >> INFO    ] el archivo es un excel
+[2024-01-03 17:09:05 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:11:04 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:12:07 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:12:32 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:15:07 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:17:39 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:18:36 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:19:11 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:19:55 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:19:59 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:20:00 >> INFO    ] Base '12.DICIEMBRE.xlsx' del 2023-12-15 15:40:38  recien cargada [ToSQL]
+[2024-01-03 17:20:00 >> INFO    ] Tiempo total de ejecucion: 815.3435122966766 de 2023-12-15 15:40:38 - 12.DICIEMBRE.xlsx
+[2024-01-03 17:20:00 >> INFO    ]  archivo a cargar2024-01-03 15:55:09 - 14.FEBRERO.xlsx
+[2024-01-03 17:20:00 >> INFO    ] La base '14.FEBRERO.xlsx' del 2024-01-03 15:55:09  esta por cargarse
+[2024-01-03 17:20:00 >> INFO    ] el archivo es un excel
+[2024-01-03 17:20:05 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:20:07 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:20:10 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:20:12 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:20:29 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:20:43 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:20:44 >> INFO    ] Base '14.FEBRERO.xlsx' del 2024-01-03 15:55:09  recien cargada [ToSQL]
+[2024-01-03 17:20:44 >> INFO    ] Tiempo total de ejecucion: 43.83085346221924 de 2024-01-03 15:55:09 - 14.FEBRERO.xlsx
+[2024-01-03 17:20:44 >> INFO    ]  archivo a cargar2023-11-24 08:15:19 - 11.NOVIEMBRE.xlsx
+[2024-01-03 17:20:44 >> INFO    ] La base '11.NOVIEMBRE.xlsx' del 2023-11-24 08:15:19  esta por cargarse
+[2024-01-03 17:20:44 >> INFO    ] el archivo es un excel
+[2024-01-03 17:23:11 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:24:40 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:25:39 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:26:01 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:28:41 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:31:14 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:32:09 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:32:47 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:32:48 >> INFO    ] Base '11.NOVIEMBRE.xlsx' del 2023-11-24 08:15:19  recien cargada [ToSQL]
+[2024-01-03 17:32:48 >> INFO    ] Tiempo total de ejecucion: 724.253814458847 de 2023-11-24 08:15:19 - 11.NOVIEMBRE.xlsx
+[2024-01-03 17:32:48 >> INFO    ]  archivo a cargar2024-01-03 14:33:45 - 13.ENERO.xlsx
+[2024-01-03 17:32:48 >> INFO    ] La base '13.ENERO.xlsx' del 2024-01-03 14:33:45  esta por cargarse
+[2024-01-03 17:32:48 >> INFO    ] el archivo es un excel
+[2024-01-03 17:35:13 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:36:40 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:37:42 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:38:05 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:40:59 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:43:37 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:44:37 >> INFO    ] Creacion Tabla temporal
+[2024-01-03 17:45:19 >> INFO    ] Insercion Tabla destino DW
+[2024-01-03 17:45:19 >> INFO    ] Base '13.ENERO.xlsx' del 2024-01-03 14:33:45  recien cargada [ToSQL]
+[2024-01-03 17:45:19 >> INFO    ] Tiempo total de ejecucion: 751.2998967170715 de 2024-01-03 14:33:45 - 13.ENERO.xlsx
+[2024-01-04 05:20:03 >> ERROR   ] [Errno 112] Host is down: '/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago'
+Traceback (most recent call last):
+  File "/root/PROCESOS/BASESMOVISTAR/src/Controllers/controller.py", line 35, in Read_files_path
+    archivos_total = os.listdir(path_) # Listar los archivos del direcctorio
+OSError: [Errno 112] Host is down: '/root/PROCESOS/COMPARTIDA_COS_L/OPERACIONES/Movistar Cartera  Mexico/Backoffice/00.Insumos/01.Pago'

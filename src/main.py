@@ -30,7 +30,7 @@ for i in range(len(list(archivos))):
     elif coleccion[key1]["opcion_path"][0].strip("'") == "2":
         path = f"{path_0}\{anio}\{mes}"
     elif coleccion[key1]["opcion_path"][0].strip("'") == "3":
-        path = f"{path_0}/{anio}"
+        path = f"{path_0}/2023"
     elif coleccion[key1]["opcion_path"][0].strip("'") == "4":
         path = f"{path_0}"
         
