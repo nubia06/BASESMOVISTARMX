@@ -121,8 +121,9 @@ def toSqlTxt(path,nombre_tabla,file_, dic_fechas, dic_formatos, separador):
     print(dic_formatos)
     for formato in dic_formatos:
         if formato in df.columns:
+            df[formato] = df[formato].str.replace("$", "", regex=True)
+            df[formato] = df[formato].str.replace("[^0-9-,]", "", regex=True)
             df[formato] = df[formato].str.replace(",", ".", regex=True)
-            df[formato] = df[formato].str.replace("[^0-9-.]", "", regex=True)
     connection,cdn_connection,engine,bbdd_or = mysql_connection()
     try:
         tabla = Table(f"tb_asignacion_{nombre_tabla}", MetaData(), autoload_with = engine)
